@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary_transparent"
+    tools:context="com.example.huanhuan.homeworkfrends.ui.home.MainActivity">
+    <include
+        android:id="@+id/moments_title_rl"
+        layout="@layout/title_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+   <!-- <ImageView
+        android:id="@+id/scan_photo_fullscreen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:transitionName="transImg"
+        android:scaleType="fitXY"/>-->
+    <android.support.v4.view.ViewPager
+        android:id="@+id/photo_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true" />
+<FrameLayout
+    android:id="@+id/photo_viewpager_content_rl"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    >
+    <TextView
+        android:id="@+id/photo_viewpager_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxLines="4"/>
+</FrameLayout>
+</RelativeLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="320dp"
+    android:background="#ffffff"
+    tools:context="com.example.huanhuan.homeworkfrends.ui.home.MainActivity">
+    <ImageView
+        android:id="@+id/header_bg_iv"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/header" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_below="@id/header_bg_iv"
+        android:background="@color/white"
+        android:layout_height="80dp"/>
+    <ImageView
+        android:id="@+id/header_icon"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:scaleType="fitXY"
+        android:layout_alignBottom="@id/header_bg_iv"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="-46dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="12dp"
+        android:src="@mipmap/profile" />
+    <TextView
+        android:id="@+id/header_username_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="曳子墨"
+        android:textSize="21sp"
+        android:layout_alignBottom="@+id/header_bg_iv"
+        android:layout_toLeftOf="@+id/header_icon"
+        android:layout_margin="8dp"
+        android:textColor="#ffffff"/>
+
+</RelativeLayout>

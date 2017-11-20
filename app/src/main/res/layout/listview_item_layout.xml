@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:padding="12dp"
+    tools:context="com.example.huanhuan.homeworkfrends.ui.home.MainActivity">
+
+    <ImageView
+        android:id="@+id/item_left_iv"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="8dp"
+        android:scaleType="fitXY"
+        android:src="@mipmap/profile" />
+
+    <LinearLayout
+        android:id="@+id/item_content_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/item_left_iv"
+        android:layout_toEndOf="@+id/item_left_iv"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_name_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="原來我的名字可以取這麼長"
+            android:textColor="@color/name_color"
+            android:textSize="20sp" />
+
+        <com.example.huanhuan.homeworkfrends.views.ContentExpandTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_content_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="4dp"
+                android:layout_marginTop="4dp"
+                android:text="tweets文字多时，大于3行，可以展开。。。。"
+                android:textColor="@color/black"
+                android:alpha="0.8"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/item_content_expand_tv_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="6dp"
+                android:textColor="@color/comment_name_color"
+                android:text="全文"
+                android:textSize="14sp" />
+        </com.example.huanhuan.homeworkfrends.views.ContentExpandTextView>
+        <com.example.huanhuan.homeworkfrends.views.PhotoGroups
+            android:id="@+id/photoes_groups"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"/>
+        <!--定位-->
+        <TextView
+            android:id="@+id/item_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:alpha="0.8"
+            android:text="ShenZhen.Airport"
+            android:textColor="@color/gray"
+            android:textSize="14sp" />
+        <!--time-->
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp">
+
+            <TextView
+                android:id="@+id/item_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:alpha="0.5"
+                android:text="1小时前"
+                android:textColor="@color/gray"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/item_comment_like_btn"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_margin="4dp"
+                android:background="@mipmap/comment" />
+        </RelativeLayout>
+        <!--评论区域 list-->
+        <com.example.huanhuan.homeworkfrends.views.MyCommentGroup
+            android:id="@+id/item_comment_list_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/comment_bg"
+            android:visibility="visible"/>
+
+
+        <ScrollView
+            android:id="@+id/comment_sv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dp"
+        android:layout_below="@id/item_content_rl"
+        android:layout_marginTop="16dp"
+        android:alpha="0.5"
+        android:background="@color/black" />
+</RelativeLayout>

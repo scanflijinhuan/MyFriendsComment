@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingRight="20dp"
+    android:gravity="center_vertical"
+    tools:context="com.example.huanhuan.homeworkfrends.ui.home.MainActivity">
+
+    <Button
+        android:id="@+id/like_btn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:background="@mipmap/like"
+       />
+    <Button
+        android:id="@+id/comment_btn"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@id/like_btn"
+        android:background="@mipmap/comment"/>
+</RelativeLayout>
